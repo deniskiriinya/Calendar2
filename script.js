@@ -1,3 +1,4 @@
+
 // Input variables
 const titleInp = document.querySelector(".title-inp input");
 const dateInp = document.querySelector(".date-inp input");
