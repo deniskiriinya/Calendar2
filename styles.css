@@ -1,0 +1,230 @@
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Heading */
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Main card */
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Sections inside the card */
+.card-section {
+    margin-bottom: 2rem;
+}
+
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Events list */
+.weeksEvents-heading,
+.mostAttendees-heading {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Form styles */
+.input-section .inps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.inp-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.inp-box label {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.inp-box input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.btns {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btns button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btns button:hover {
+    background-color: #218838;
+}
+
+#clear-Event {
+    background-color: #dc3545;
+}
+
+#clear-Event:hover {
+    background-color: #c82333;
+}
+
+/* Event view button */
+.mostAttendees-btn button {
+    padding: 0.5rem 1rem;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.mostAttendees-btn button:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .input-section .inps {
+        grid-template-columns: 1fr;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+}
+
+.eventList-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.eventList-section th,
+.eventList-section td {
+  border: none;
+  padding: 8px;
+  text-align: center;
+}
+
+.eventList-section th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.eventList-section tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.eventList-section tr:hover {
+  background-color: #e9ecef;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .input-section .inps {
+    flex-direction: column;
+  }
+  .card-section{
+    width: 90;
+  }
+
+  .inp-box {
+    flex: 1 1 100%;
+  }
+
+  .btns {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  
+}
+
+.messageModal{
+    place-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+    background-color: #000000a9;
+    display: grid;
+}
+.modal-content{
+    display: grid;
+    place-content: center;
+    position: relative;
+    width: 500px;
+    min-height: 150px;
+    background-color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.modal-content svg {
+    fill: #4b4b4b;
+    width: 20px;
+    position: absolute;
+    top: 6%;
+    right: 5%;
+    cursor: pointer;
+}
+.content-heading{
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.content-text{
+    font-size: 1.2em;
+}
+@media only screen and (max-width:600px){
+    .modal-content{
+        width: 400px;
+        height: 175px;
+    }
+    .modal-content svg{
+        width: 15px;
+    }
+}
